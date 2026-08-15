@@ -222,3 +222,7 @@ header {
         font-size: 1.7rem;
     }
 }
+.task-status {
+    cursor: pointer;
+    user-select: none;
+}
