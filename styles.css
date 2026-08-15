@@ -222,3 +222,52 @@ header {
         font-size: 1.7rem;
     }
 }
+.task-status {
+    cursor: pointer;
+    user-select: none;
+}
+.theme-toggle {
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #ffffff;
+    background-color: #2563eb;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.theme-toggle:hover {
+    background-color: #1d4ed8;
+}
+
+body.dark-theme {
+    color: #f8fafc;
+    background-color: #111827;
+}
+
+body.dark-theme header {
+    background-color: #1f2937;
+}
+
+body.dark-theme .nav-links a {
+    color: #e5e7eb;
+}
+
+body.dark-theme .hero,
+body.dark-theme #tasks {
+    background-color: #111827;
+}
+
+body.dark-theme .hero p,
+body.dark-theme .section-description,
+body.dark-theme .feature-card p,
+body.dark-theme .goal-card p,
+body.dark-theme .task-item p {
+    color: #d1d5db;
+}
+
+body.dark-theme .feature-card,
+body.dark-theme .goal-card,
+body.dark-theme .task-item {
+    background-color: #1f2937;
+}
