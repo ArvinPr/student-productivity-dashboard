@@ -271,3 +271,12 @@ body.dark-theme .goal-card,
 body.dark-theme .task-item {
     background-color: #1f2937;
 }
+footer a {
+    margin-left: 1rem;
+    color: #93c5fd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
