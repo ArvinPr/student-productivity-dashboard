@@ -271,3 +271,9 @@ body.dark-theme .goal-card,
 body.dark-theme .task-item {
     background-color: #1f2937;
 }
+footer {
+    padding: 2rem;
+    text-align: center;
+    background-color: #1f2937;
+    color: #f8fafc;
+}
