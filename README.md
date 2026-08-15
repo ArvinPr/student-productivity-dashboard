@@ -2,18 +2,18 @@
 
 ## مشخصات گروه
 
-| نام و نام خانوادگی | شماره دانشجویی | نقش در آزمایش |
+| نام و نام خانوادگی | شماره دانشجویی | نقش |
 |---|---:|---|
 | آروین پورزلفی | 401105731 | سرگروه |
 | علی مجیدی | 401106447 | عضو گروه |
 
 - **نام Repository:** `student-productivity-dashboard`
 - **نام رابط کاربری پروژه:** `StudyFlow`
-- **Repository:** <https://github.com/ArvinPr/student-productivity-dashboard>
-- **GitHub Actions:** <https://github.com/ArvinPr/student-productivity-dashboard/actions>
-- **GitHub Pages:** <https://ArvinPr.github.io/student-productivity-dashboard/>
+- **Repository:** https://github.com/ArvinPr/student-productivity-dashboard
+- **GitHub Actions:** https://github.com/ArvinPr/student-productivity-dashboard/actions
+- **GitHub Pages:** https://ArvinPr.github.io/student-productivity-dashboard/
 
-> آدرس GitHub Pages از ابتدا بر اساس نام کاربری و Repository مشخص است، اما فعال‌شدن نسخه نهایی آن به اجرای موفق Workflow پس از Merge نهایی به `main` وابسته است.
+> توجه: Workflow مربوط به GitHub Pages طوری تنظیم شده است که پس از ورود نسخه نهایی به `main` اجرا شود. بنابراین لینک Pages پس از اجرای موفق Workflow نهایی قابل بررسی خواهد بود.
 
 ---
 
@@ -27,20 +27,20 @@
 - استفاده واقعی از چند Branch معنادار
 - توسعه قابلیت‌ها در Feature Branchهای مستقل
 - ادغام تغییرات از طریق Pull Request
-- ایجاد و Resolve کردن Merge Conflict
+- ایجاد و Resolve کردن حداقل دو Merge Conflict
 - استفاده از Kanban برای مدیریت Taskها
 - مشارکت هر دو عضو گروه در توسعه و Git
 - راه‌اندازی GitHub Actions برای استقرار خودکار
 - آماده‌سازی GitHub Pages برای انتشار نسخه نهایی
 - تهیه گزارش کامل در `README.md`
 
-پروژه به‌صورت **HTML، CSS و JavaScript خالص** پیاده‌سازی شد. این انتخاب باعث شد تمرکز اصلی آزمایش علاوه بر Frontend، روی Git Workflow، Branching، Pull Request، Conflict و Continuous Deployment باقی بماند.
+پروژه به‌صورت **HTML، CSS و JavaScript خالص** پیاده‌سازی شد تا تمرکز اصلی آزمایش علاوه بر Frontend، روی Git Workflow، Branching، Pull Request، Conflict و Continuous Deployment باقی بماند.
 
 ---
 
 # 2. معرفی پروژه StudyFlow
 
-پروژه‌ی نهایی یک داشبورد ساده برای مدیریت فعالیت‌های دانشجویی است. نام رابط کاربری **StudyFlow** انتخاب شد و ساختار صفحه به چند بخش تقسیم شد:
+پروژه نهایی یک داشبورد ساده برای مدیریت فعالیت‌های دانشجویی است. نام رابط کاربری **StudyFlow** انتخاب شد و ساختار صفحه به چند بخش تقسیم شد:
 
 - Navbar
 - Hero Section
@@ -68,9 +68,9 @@
 
 ---
 
-# 3. مدیریت کار با Kanban
+# 3. مدیریت پروژه با Kanban
 
-در ابتدای آزمایش یک Kanban Board برای مدیریت فعالیت‌های تیم ایجاد شد. برای اینکه بورد صرفاً یک مستند نهایی نباشد، Taskها همزمان با پیشرفت پروژه به آن اضافه و وضعیت آن‌ها تغییر داده شد.
+در ابتدای آزمایش یک Kanban Board برای مدیریت فعالیت‌های تیم ایجاد شد. Taskها هم‌زمان با پیشرفت پروژه به بورد اضافه و وضعیت آن‌ها به‌روزرسانی شد.
 
 وضعیت‌های اصلی استفاده‌شده:
 
@@ -82,9 +82,9 @@ Review
 Done
 ```
 
-برای Taskها مواردی مانند Assignee، Priority، Size و Estimate نیز مشخص شد. مسئول هر Task مشخص بود تا سهم هر عضو در روند پروژه قابل مشاهده باشد.
+برای Taskها مواردی مانند Assignee، Priority، Size و Estimate نیز مشخص شد. مسئول هر Task نیز تعیین شد تا سهم هر عضو در روند پروژه قابل مشاهده باشد.
 
-نمونه Taskهایی که در طول پروژه تعریف شدند:
+نمونه Taskهای اصلی:
 
 - `Initialize Git Repository`
 - `Configure .gitignore`
@@ -101,7 +101,7 @@ Done
 - `Document Project Workflow`
 - `Answer Git Questions`
 
-Taskها پس از پایان کدنویسی مستقیماً `Done` نمی‌شدند؛ در مواردی که نیاز به Pull Request داشتند ابتدا وارد `Review` شده و پس از Merge نهایی به `Done` منتقل می‌شدند.
+Taskهایی که نیاز به Pull Request داشتند پس از پایان کدنویسی ابتدا وارد `Review` شده و پس از Merge به `Done` منتقل می‌شدند.
 
 ---
 
@@ -125,7 +125,7 @@ Taskها پس از پایان کدنویسی مستقیماً `Done` نمی‌ش
 - ذخیره Theme با `localStorage`
 - پیاده‌سازی Footer Copyright
 - راه‌اندازی GitHub Actions
-- مدیریت بخش قابل توجهی از Pull Requestها و Reviewها
+- مدیریت بخش مهمی از Pull Requestها و Reviewها
 - مدیریت Kanban و هماهنگی مراحل
 - تهیه گزارش اصلی آزمایش
 - مسئولیت فیلم و تحویل نهایی
@@ -143,12 +143,12 @@ Taskها پس از پایان کدنویسی مستقیماً `Done` نمی‌ش
 - Responsive کردن Navbar و Hero
 - Responsive کردن Main Content
 - پیاده‌سازی Footer Navigation
-- مشارکت در Merge Conflict و Resolve کردن آن
+- مشارکت در ایجاد و حل Merge Conflict
 - ایجاد Pull Requestهای مربوط به Taskهای خود
 - مشارکت در Review
 - پاسخ به هفت سؤال Git در گزارش
 
-تقسیم وظایف به‌گونه‌ای انجام شد که هر دو نفر علاوه بر Frontend، تجربه‌ی واقعی Branch، Commit، Push و Pull Request داشته باشند.
+تقسیم وظایف به‌گونه‌ای انجام شد که هر دو نفر علاوه بر Frontend، تجربه واقعی Branch، Commit، Push و Pull Request داشته باشند.
 
 ---
 
@@ -156,7 +156,7 @@ Taskها پس از پایان کدنویسی مستقیماً `Done` نمی‌ش
 
 کار با ایجاد یک Repository محلی آغاز شد. Git روی پروژه Initialize شد و نام Branch اصلی روی `main` قرار گرفت.
 
-در این مرحله یک `README.md` اولیه ایجاد شد و اولین Commit پروژه با پیام زیر ثبت شد:
+یک `README.md` اولیه ایجاد شد و اولین Commit پروژه با پیام زیر ثبت شد:
 
 ```text
 initialize project repository
@@ -164,15 +164,9 @@ initialize project repository
 
 سپس Repository محلی به Repository موجود در GitHub متصل و Branch `main` برای اولین بار Push شد.
 
-در این مرحله عملاً سه مفهوم اصلی بررسی شدند:
+در این مرحله مفاهیم Working Tree، Staging Area و Commit عملاً استفاده شدند.
 
-1. Working Tree
-2. Staging Area
-3. Commit
-
-فایل ابتدا به‌صورت Untracked مشاهده شد، سپس با `git add` وارد Stage و با `git commit` در History ثبت شد.
-
-**مستندات این مرحله:** [تصویر 1](./screenshots/1.png)، [تصویر 2](./screenshots/2.png)
+**مستندات:** [تصویر 1](./screenshots/1.png)، [تصویر 2](./screenshots/2.png)
 
 ---
 
@@ -186,9 +180,9 @@ initialize project repository
 fix README encoding
 ```
 
-این Commit صرفاً برای افزایش تعداد Commitها ایجاد نشد؛ یک مشکل واقعی در فایل وجود داشت که برطرف شد.
+این Commit برای رفع یک مشکل واقعی ایجاد شد.
 
-**مستند این مرحله:** [تصویر 3](./screenshots/3.png)
+**مستند:** [تصویر 3](./screenshots/3.png)
 
 ---
 
@@ -200,7 +194,7 @@ fix README encoding
 develop
 ```
 
-`develop` روی GitHub نیز Push شد و از این مرحله به بعد به‌عنوان Branch تجمیع Featureها مورد استفاده قرار گرفت.
+`develop` روی GitHub Push شد و از این مرحله به بعد به‌عنوان Branch تجمیع Featureها مورد استفاده قرار گرفت.
 
 ساختار کلی Workflow تیم:
 
@@ -219,7 +213,7 @@ Feature Branch
 GitHub Actions / GitHub Pages
 ```
 
-در طول پروژه Branchهای زیر واقعاً استفاده شدند:
+Branchهای اصلی استفاده‌شده:
 
 | Branch | کاربرد |
 |---|---|
@@ -234,18 +228,20 @@ GitHub Actions / GitHub Pages
 | `feature/footer-copyright` | Copyright |
 | `feature/footer-navigation` | Footer Navigation |
 | `ci/github-pages` | GitHub Actions Workflow |
+| `docs/project-workflow` | گزارش اصلی آزمایش |
+| `docs/git-questions` | پاسخ پرسش‌های Git |
 
-در نتیجه شرط «حداقل سه Branch معنادار» نه‌تنها رعایت شد، بلکه هر Branch با هدف مشخص ایجاد و در روند واقعی توسعه استفاده شد.
+در نتیجه شرط «حداقل سه Branch معنادار» با تعداد بیشتری Branch واقعی و مرتبط با توسعه پوشش داده شد.
 
-**مستند این مرحله:** [تصویر 4](./screenshots/4.png)
+**مستند:** [تصویر 4](./screenshots/4.png)
 
 ---
 
 # 8. تنظیم `.gitignore`
 
-در مرحله بعد فایل `.gitignore` ایجاد شد تا فایل‌ها و تنظیماتی که نباید وارد Repository شوند Track نشوند.
+فایل `.gitignore` ایجاد شد تا فایل‌ها و تنظیماتی که نباید وارد Repository شوند Track نشوند.
 
-مهم‌ترین موارد اضافه‌شده:
+مهم‌ترین موارد:
 
 ```gitignore
 .DS_Store
@@ -263,7 +259,7 @@ Commit:
 add gitignore configuration
 ```
 
-**مستندات این مرحله:** [تصویر 5](./screenshots/5.png)، [تصویر 6](./screenshots/6.png)
+**مستندات:** [تصویر 5](./screenshots/5.png)، [تصویر 6](./screenshots/6.png)
 
 ---
 
@@ -283,35 +279,31 @@ styles.css
 script.js
 ```
 
-در `index.html` ساختار پایه سند، اتصال CSS و JavaScript ایجاد شد. در `styles.css` Reset اولیه و در `script.js` ساختار اولیه JavaScript قرار گرفت.
-
 Commit این مرحله:
 
 ```text
 create base project structure
 ```
 
-Branch روی Remote Push شد.
-
-**مستندات ساخت Branch و Commit:** [تصویر 7](./screenshots/7.png)، [تصویر 8](./screenshots/8.png)
+**مستندات:** [تصویر 7](./screenshots/7.png)، [تصویر 8](./screenshots/8.png)
 
 ---
 
 # 10. Pull Request شماره 1 — Base Project Structure
 
-پس از پایان Base Structure، برای ادغام مستقیم از `git merge` روی `develop` استفاده نکردیم. یک Pull Request با مسیر زیر ایجاد شد:
+پس از پایان Base Structure، یک Pull Request با مسیر زیر ایجاد شد:
 
 ```text
 feature/base-structure -> develop
 ```
 
-پس از بررسی تغییرات، PR شماره 1 Merge شد. این اولین استفاده واقعی پروژه از Pull Request برای ادغام Feature بود.
+پس از بررسی تغییرات، PR شماره 1 Merge شد.
 
 **مستندات:** [تصویر 9](./screenshots/9.png)، [تصویر 10](./screenshots/10.png)، [تصویر 11](./screenshots/11.png)
 
 ---
 
-# 11. شروع مشارکت مستقل علی و طراحی Main Layout
+# 11. طراحی Main Layout توسط علی
 
 علی Repository را روی سیستم خود Clone کرد، روی `develop` قرار گرفت و آخرین تغییرات را دریافت کرد.
 
@@ -321,9 +313,7 @@ feature/base-structure -> develop
 feature/main-layout
 ```
 
-هدف این مرحله فقط مشخص‌کردن Layout کلی صفحه بود و جزئیات نهایی هر Section در مراحل بعد اضافه شدند.
-
-بخش‌های اصلی صفحه در این مرحله تعیین شدند:
+در این مرحله Layout کلی صفحه تعیین شد:
 
 - Header
 - Features
@@ -337,7 +327,7 @@ Commit:
 design main page layout
 ```
 
-پس از Push، PR شماره 2 ساخته و به `develop` Merge شد.
+سپس PR شماره 2 ساخته و به `develop` Merge شد.
 
 **مستندات:** [تصویر 12](./screenshots/12.png)، [تصویر 13](./screenshots/13.png)، [تصویر 14](./screenshots/14.png)، [تصویر 15](./screenshots/15.png)
 
@@ -351,11 +341,9 @@ design main page layout
 feature/navbar-hero
 ```
 
-برای اینکه Commitها Atomic و قابل فهم باشند، Navbar و Hero در یک Commit بزرگ قرار نگرفتند.
+برای Atomic ماندن Commitها، Navbar و Hero در چند مرحله توسعه داده شدند.
 
 ## 12.1. Navbar
-
-ابتدا Navbar شامل Logo و لینک‌های بخش‌های مختلف صفحه اضافه شد.
 
 Commit:
 
@@ -365,8 +353,6 @@ implement navigation bar
 
 ## 12.2. Hero
 
-در Commit بعد Hero Section شامل عنوان اصلی، توضیح و دکمه `Get Started` اضافه شد.
-
 Commit:
 
 ```text
@@ -375,23 +361,21 @@ add hero section
 
 ## 12.3. استایل Navbar و Hero
 
-در مرحله بعد CSS مربوط به Header، Navbar، Logo، لینک‌ها، Hero و CTA Button نوشته شد.
-
 Commit:
 
 ```text
 style navbar and hero
 ```
 
-**مستندات Branch و سه مرحله توسعه:** [تصویر 16](./screenshots/16.png)، [تصویر 17](./screenshots/17.png)، [تصویر 18](./screenshots/18.png)، [تصویر 19](./screenshots/19.png)، [تصویر 21](./screenshots/21.png)
+**مستندات:** [تصویر 16](./screenshots/16.png)، [تصویر 17](./screenshots/17.png)، [تصویر 18](./screenshots/18.png)، [تصویر 19](./screenshots/19.png)، [تصویر 21](./screenshots/21.png)
 
 ---
 
 # 13. تست رابط کاربری و رفع مشکل ساختار HTML
 
-پس از اضافه‌شدن Styleها، پروژه در Browser تست شد. در ابتدا ظاهر صفحه نشان می‌داد CSS به فایل HTML اعمال نشده است.
+پس از اضافه‌شدن Styleها، پروژه در Browser تست شد. ظاهر اولیه نشان می‌داد CSS به فایل HTML اعمال نشده است.
 
-**نتیجه‌ی تست اولیه:** [تصویر 20](./screenshots/20.png)
+**نتیجه تست اولیه:** [تصویر 20](./screenshots/20.png)
 
 پس از بررسی فایل‌ها مشخص شد هنگام تغییر Layout، بخش‌های اصلی سند HTML از جمله `head` و لینک `styles.css` حذف شده بودند. در نتیجه Browser فایل CSS را Load نمی‌کرد.
 
@@ -409,13 +393,11 @@ restore HTML document structure
 
 **ثبت اصلاح:** [تصویر 23](./screenshots/23.png)
 
-این مرحله نمونه‌ای از Debug واقعی در روند توسعه پروژه بود.
-
 ---
 
 # 14. Pull Request شماره 3 — Navbar و Hero
 
-پس از تکمیل و تست Feature، Pull Request زیر ایجاد شد:
+Pull Request زیر ایجاد شد:
 
 ```text
 feature/navbar-hero -> develop
@@ -444,11 +426,9 @@ feature/main-sections
 
 **دریافت آخرین تغییرات:** [تصویر 25](./screenshots/25.png)
 
-Main Content نیز به چند Commit معنادار تقسیم شد.
+Main Content به چند Commit تقسیم شد.
 
 ## 15.1. Features
-
-بخش Features شامل Cardهایی برای قابلیت‌های اصلی داشبورد ایجاد شد.
 
 Commit:
 
@@ -460,8 +440,6 @@ implement features section
 
 ## 15.2. Tasks
 
-بخش Tasks شامل چند Task نمونه و وضعیت آن‌ها ایجاد شد.
-
 Commit:
 
 ```text
@@ -472,8 +450,6 @@ implement tasks section
 
 ## 15.3. Goals
 
-بخش Goals برای نمایش اهداف تحصیلی ایجاد شد.
-
 Commit:
 
 ```text
@@ -483,8 +459,6 @@ implement goals section
 **مستند:** [تصویر 28](./screenshots/28.png)
 
 ## 15.4. استایل Main Content
-
-در مرحله بعد برای Feature Cardها، Task Itemها، Goal Cardها، Gridها و Sectionها Style اضافه شد.
 
 Commit:
 
@@ -508,7 +482,7 @@ Branch `feature/main-sections` شامل چهار Commit مستقل بود و ا�
 
 # 17. Responsive Design
 
-پس از کامل‌شدن نسخه Desktop، Responsive Design در یک Branch مستقل انجام شد:
+پس از کامل‌شدن نسخه Desktop، Responsive Design در Branch مستقل زیر انجام شد:
 
 ```text
 feature/responsive-layout
@@ -516,11 +490,7 @@ feature/responsive-layout
 
 **ایجاد Branch:** [تصویر 31](./screenshots/31.png)
 
-Responsive Design نیز به دو Commit تقسیم شد.
-
 ## 17.1. Responsive کردن Navigation و Hero
-
-در این مرحله Media Queryهای مربوط به Navbar، Navigation Links و Hero نوشته شدند.
 
 Commit:
 
@@ -531,8 +501,6 @@ make navigation responsive
 **مستند:** [تصویر 32](./screenshots/32.png)
 
 ## 17.2. Responsive کردن Content Sections
-
-Gridهای Features و Goals و همچنین Task Itemها برای Tablet و Mobile بهینه شدند.
 
 Commit:
 
@@ -558,11 +526,9 @@ feature/interactions
 
 سه قابلیت مستقل در این Branch توسعه داده شدند.
 
----
-
 ## 18.1. تغییر وضعیت Taskها
 
-برای Elementهای دارای کلاس `task-status` یک Click Event تعریف شد. وضعیت Task با هر Click در چرخه زیر تغییر می‌کند:
+وضعیت Task با هر Click در چرخه زیر تغییر می‌کند:
 
 ```text
 To Do -> In Progress -> Done -> To Do
@@ -576,11 +542,9 @@ add task status interaction
 
 **مستند:** [تصویر 35](./screenshots/35.png)
 
----
-
 ## 18.2. Dark / Light Theme
 
-یک Theme Toggle به Navbar اضافه شد. با کلیک روی دکمه، کلاس `dark-theme` روی `body` Toggle می‌شود و CSS مربوط به حالت Dark فعال می‌شود.
+یک Theme Toggle به Navbar اضافه شد. با کلیک روی دکمه، کلاس `dark-theme` روی `body` Toggle می‌شود.
 
 Commit:
 
@@ -590,13 +554,9 @@ add theme toggle
 
 **مستندات:** [تصویر 36](./screenshots/36.png)، [تصویر 37](./screenshots/37.png)
 
----
-
 ## 18.3. ذخیره Theme با `localStorage`
 
-در نسخه اولیه Theme Toggle، بعد از Refresh صفحه Theme انتخاب‌شده از بین می‌رفت. برای رفع این موضوع Theme در `localStorage` ذخیره شد.
-
-در Load بعدی صفحه، مقدار ذخیره‌شده خوانده شده و Theme مناسب دوباره اعمال می‌شود.
+برای حفظ Theme بعد از Refresh، مقدار Theme در `localStorage` ذخیره و در Load بعدی خوانده شد.
 
 Commit:
 
@@ -610,13 +570,7 @@ persist theme preference
 
 # 19. Pull Request شماره 6 — JavaScript Interactions
 
-سه Commit JavaScript در PR شماره 6 قرار گرفتند:
-
-- `add task status interaction`
-- `add theme toggle`
-- `persist theme preference`
-
-PR با موفقیت وارد `develop` شد.
+سه Commit JavaScript در PR شماره 6 قرار گرفتند و PR با موفقیت وارد `develop` شد.
 
 **مستند:** [تصویر 39](./screenshots/39.png)
 
@@ -624,19 +578,15 @@ PR با موفقیت وارد `develop` شد.
 
 # 20. Merge Conflict اول — توسعه هم‌زمان Footer
 
-برای انجام Requirement مربوط به Conflict، یک Conflict واقعی در جریان توسعه ایجاد شد.
-
-هدف این بود که دو عضو گروه از یک Base مشترک، دو قابلیت متفاوت را روی یک بخش مشترک توسعه دهند.
+برای انجام Requirement مربوط به Conflict، دو عضو گروه از یک Base مشترک دو قابلیت متفاوت را روی یک بخش مشترک توسعه دادند.
 
 ## 20.1. تغییر آروین
 
-آروین Branch زیر را ایجاد کرد:
+Branch:
 
 ```text
 feature/footer-copyright
 ```
-
-در این Branch Footer برای نمایش Copyright تغییر کرد.
 
 Commit:
 
@@ -648,13 +598,11 @@ add footer copyright
 
 ## 20.2. تغییر علی
 
-در همان زمان، علی از همان نسخه `develop` Branch جداگانه‌ای ساخت:
+Branch:
 
 ```text
 feature/footer-navigation
 ```
-
-Footer در Branch علی برای نمایش Quick Links توسعه داده شد.
 
 Commit:
 
@@ -678,15 +626,11 @@ feature/footer-copyright -> develop
 
 **مستند:** [تصویر 42](./screenshots/42.png)
 
-پس از این مرحله `develop` دارای نسخه Footer آروین بود، در حالی که Branch علی هنوز نسخه مستقل خود را داشت.
-
 ---
 
-# 22. ایجاد Conflict واقعی
+# 22. ایجاد Conflict واقعی اول
 
-علی آخرین نسخه `develop` را دریافت کرد و سپس آن را داخل `feature/footer-navigation` Merge کرد.
-
-از آنجا که هر دو Branch بخش‌های یکسانی از Footer را در فایل‌های مشترک تغییر داده بودند، Git نتوانست Merge خودکار انجام دهد.
+علی آخرین نسخه `develop` را داخل `feature/footer-navigation` Merge کرد.
 
 Conflict در دو فایل ایجاد شد:
 
@@ -695,7 +639,7 @@ index.html
 styles.css
 ```
 
-Markerهای Conflict داخل فایل‌ها مشاهده شدند:
+Markerهای Conflict:
 
 ```text
 <<<<<<< HEAD
@@ -707,32 +651,26 @@ Markerهای Conflict داخل فایل‌ها مشاهده شدند:
 
 **Conflict در `styles.css`:** [تصویر 44](./screenshots/44.png)
 
-این Conflict به‌صورت واقعی حاصل تغییرات مستقل دو عضو روی یک بخش مشترک بود و صرفاً برای نمایش مصنوعی Conflict ساخته نشد.
-
 ---
 
 # 23. Resolve کردن Conflict اول
 
-برای حل Conflict تصمیم گرفته شد هیچ‌کدام از دو قابلیت حذف نشوند. نسخه نهایی Footer شامل هر دو مورد شد:
+برای حل Conflict تصمیم گرفته شد هر دو قابلیت حفظ شوند:
 
-- Copyright ایجادشده توسط آروین
-- Quick Links ایجادشده توسط علی
+- Copyright آروین
+- Footer Navigation علی
 
-Markerهای Conflict حذف و محتوای نهایی فایل‌ها به‌صورت دستی تنظیم شد.
-
-پس از Resolve، وضعیت Git بررسی شد و فایل‌های حل‌شده Stage شدند.
+Markerها حذف و محتوای نهایی فایل‌ها به‌صورت دستی تنظیم شد.
 
 **وضعیت حین Resolve:** [تصویر 45](./screenshots/45.png)
 
-پس از Stage کردن فایل‌ها، Git اعلام کرد تمام Conflictها برطرف شده‌اند و Merge باید با Commit نهایی شود.
-
-Commit:
+پس از Stage کردن فایل‌ها، Merge با Commit زیر نهایی شد:
 
 ```text
 resolve footer merge conflict
 ```
 
-**مستند Commit حل Conflict:** [تصویر 46](./screenshots/46.png)
+**مستند:** [تصویر 46](./screenshots/46.png)
 
 ---
 
@@ -744,8 +682,6 @@ PR توسط آروین Review و Approve شد و سپس وارد `develop` شد.
 
 **مستند:** [تصویر 47](./screenshots/47.png)
 
-این مرحله علاوه بر ثبت Conflict، نمونه واضحی از همکاری دو نفر روی یک قابلیت مشترک و Review تغییرات بود.
-
 ---
 
 # 25. GitHub Actions و استقرار خودکار
@@ -756,7 +692,7 @@ PR توسط آروین Review و Approve شد و سپس وارد `develop` شد.
 ci/github-pages
 ```
 
-در این Branch ساختار Workflow ایجاد شد:
+ساختار Workflow:
 
 ```text
 .github/
@@ -766,16 +702,16 @@ ci/github-pages
 
 **ایجاد Branch و Workflow:** [تصویر 48](./screenshots/48.png)
 
-Workflow به‌گونه‌ای طراحی شد که مراحل اصلی زیر را انجام دهد:
+Workflow مراحل زیر را انجام می‌دهد:
 
-1. دریافت Source Code با Checkout
+1. Checkout کردن Repository
 2. آماده‌سازی GitHub Pages
 3. Upload کردن فایل‌های Static به‌عنوان Artifact
 4. Deploy کردن Artifact روی GitHub Pages
 
 از آنجا که پروژه HTML/CSS/JavaScript خالص است، Build Step جداگانه‌ای مانند `npm run build` نیاز نبود.
 
-Trigger اصلی Deployment روی Branch `main` تنظیم شد تا فقط نسخه نهایی و تأییدشده پروژه روی Pages منتشر شود.
+Trigger اصلی Deployment روی Branch `main` تنظیم شد.
 
 Commit:
 
@@ -783,15 +719,13 @@ Commit:
 add GitHub Pages deployment workflow
 ```
 
-Commit روی Branch مربوطه Push شد.
-
 **مستند:** [تصویر 49](./screenshots/49.png)
 
 ---
 
 # 26. Pull Request شماره 9 — GitHub Pages Workflow
 
-برای ورود Workflow به `develop`، PR شماره 9 ایجاد شد:
+PR شماره 9 ایجاد شد:
 
 ```text
 ci/github-pages -> develop
@@ -801,49 +735,141 @@ ci/github-pages -> develop
 
 **مستند:** [تصویر 50](./screenshots/50.png)
 
-## لینک‌های مربوط به Deployment
+## لینک‌های Deployment
 
-- **GitHub Actions:** <https://github.com/ArvinPr/student-productivity-dashboard/actions>
-- **GitHub Pages:** <https://ArvinPr.github.io/student-productivity-dashboard/>
-
-Workflow طوری تنظیم شده است که Deploy اصلی پس از Merge نهایی به `main` اجرا شود.
+- **GitHub Actions:** https://github.com/ArvinPr/student-productivity-dashboard/actions
+- **GitHub Pages:** https://ArvinPr.github.io/student-productivity-dashboard/
 
 ---
 
-# 27. Commitهای معنادار پروژه
+# 27. مستندسازی پروژه توسط آروین
 
-تا پیش از Commit شدن گزارش مستندسازی، حداقل ۲۲ Commit توسعه‌ای معنادار در پروژه ثبت شده است. Merge Commitهای GitHub در این شمارش لحاظ نشده‌اند.
+برای گزارش اصلی آزمایش Branch زیر ایجاد شد:
 
-| # | Commit Message | مسئول | مربوط به |
-|---:|---|---|---|
-| 1 | `initialize project repository` | آروین | ایجاد Repository |
-| 2 | `fix README encoding` | آروین | رفع Encoding |
-| 3 | `add gitignore configuration` | آروین | `.gitignore` |
-| 4 | `create base project structure` | آروین | ساختار اولیه |
-| 5 | `design main page layout` | علی | Layout |
-| 6 | `implement navigation bar` | آروین | Navbar |
-| 7 | `add hero section` | آروین | Hero |
-| 8 | `style navbar and hero` | آروین | CSS |
-| 9 | `restore HTML document structure` | آروین | Bug Fix |
-| 10 | `implement features section` | علی | Features |
-| 11 | `implement tasks section` | علی | Tasks |
-| 12 | `implement goals section` | علی | Goals |
-| 13 | `style main content sections` | علی | Main CSS |
-| 14 | `make navigation responsive` | علی | Responsive |
-| 15 | `make content sections responsive` | علی | Responsive |
-| 16 | `add task status interaction` | آروین | JavaScript |
-| 17 | `add theme toggle` | آروین | Theme |
-| 18 | `persist theme preference` | آروین | `localStorage` |
-| 19 | `add footer copyright` | آروین | Footer |
-| 20 | `add footer navigation` | علی | Footer |
-| 21 | `resolve footer merge conflict` | علی | Conflict Resolution |
-| 22 | `add GitHub Pages deployment workflow` | آروین | CI/CD |
+```text
+docs/project-workflow
+```
 
-در نتیجه شرط حداقل ۲۰ Commit معنادار پیش از پایان کامل مستندسازی نیز رعایت شده است.
+آروین در این Branch:
+
+- گزارش کامل مراحل پروژه را در `README.md` نوشت.
+- فایل `chatgpt_interaction_log.md` را برای مستندسازی تعامل با ChatGPT اضافه کرد.
+- تصاویر مراحل پروژه را در پوشه `screenshots/` قرار داد.
+
+Commitهای اصلی این Branch:
+
+```text
+document project workflow
+add project screenshots
+```
+
+سپس PR شماره 10 ساخته و وارد `develop` شد.
+
+**مستند:** [تصویر 53](./screenshots/53.png)
 
 ---
 
-# 28. Pull Requestهای اصلی
+# 28. پاسخ پرسش‌های Git توسط علی
+
+علی در Branch زیر پاسخ هفت سؤال آزمایش را تهیه کرد:
+
+```text
+docs/git-questions
+```
+
+پاسخ‌ها در همان فایل `README.md` نوشته شدند تا بعداً با گزارش اصلی پروژه ادغام شوند.
+
+Commit:
+
+```text
+answer Git questions
+```
+
+**مستند:** [تصویر 52](./screenshots/52.png)
+
+---
+
+# 29. Merge Conflict دوم — README
+
+Conflict دوم در مرحله مستندسازی پروژه ایجاد شد.
+
+آروین و علی از یک نسخه مشترک `develop` دو Branch مستقل داشتند:
+
+```text
+docs/project-workflow
+docs/git-questions
+```
+
+آروین گزارش کامل پروژه را در `README.md` نوشته بود و علی نیز پاسخ هفت سؤال آزمایش را در همان فایل `README.md` نوشته بود.
+
+ابتدا Branch آروین با Pull Request شماره 10 وارد `develop` شد.
+
+سپس علی آخرین نسخه `develop` را دریافت کرد و داخل Branch خود Merge کرد:
+
+```bash
+git merge develop
+```
+
+به دلیل تغییر گسترده `README.md` در هر دو Branch، Git نتوانست فایل را به‌صورت خودکار Merge کند و Conflict زیر ایجاد شد:
+
+```text
+CONFLICT (content): Merge conflict in README.md
+Automatic merge failed; fix conflicts and then commit the result.
+```
+
+**مستند Conflict دوم:** [تصویر 54](./screenshots/54.png)
+
+برای Resolve کردن Conflict، گزارش اصلی پروژه از `develop` به‌عنوان ساختار اصلی README حفظ شد و پاسخ هفت سؤال علی نیز در بخش «پاسخ پرسش‌های آزمایش» به همان فایل اضافه شد.
+
+به این ترتیب هیچ‌یک از مستندات دو عضو حذف نشد و نسخه نهایی README شامل هر دو بخش شد.
+
+Commit نهایی Resolve این Conflict بعد از Stage شدن README ثبت می‌شود:
+
+```text
+resolve README merge conflict
+```
+
+---
+
+# 30. Commitهای معنادار پروژه
+
+تا پیش از Commit حل Conflict دوم، حداقل ۲۵ Commit معنادار بدون احتساب Merge Commitها ثبت شده است.
+
+مهم‌ترین Commitها:
+
+| # | Commit Message | مسئول |
+|---:|---|---|
+| 1 | `initialize project repository` | آروین |
+| 2 | `fix README encoding` | آروین |
+| 3 | `add gitignore configuration` | آروین |
+| 4 | `create base project structure` | آروین |
+| 5 | `design main page layout` | علی |
+| 6 | `implement navigation bar` | آروین |
+| 7 | `add hero section` | آروین |
+| 8 | `style navbar and hero` | آروین |
+| 9 | `restore HTML document structure` | آروین |
+| 10 | `implement features section` | علی |
+| 11 | `implement tasks section` | علی |
+| 12 | `implement goals section` | علی |
+| 13 | `style main content sections` | علی |
+| 14 | `make navigation responsive` | علی |
+| 15 | `make content sections responsive` | علی |
+| 16 | `add task status interaction` | آروین |
+| 17 | `add theme toggle` | آروین |
+| 18 | `persist theme preference` | آروین |
+| 19 | `add footer copyright` | آروین |
+| 20 | `add footer navigation` | علی |
+| 21 | `resolve footer merge conflict` | علی |
+| 22 | `add GitHub Pages deployment workflow` | آروین |
+| 23 | `document project workflow` | آروین |
+| 24 | `add project screenshots` | آروین |
+| 25 | `answer Git questions` | علی |
+
+در نتیجه شرط حداقل ۲۰ Commit معنادار به‌طور کامل رعایت شده است.
+
+---
+
+# 31. Pull Requestهای اصلی
 
 | PR | عنوان | Source | Target |
 |---:|---|---|---|
@@ -856,33 +882,15 @@ Workflow طوری تنظیم شده است که Deploy اصلی پس از Merge 
 | #7 | Add footer copyright | `feature/footer-copyright` | `develop` |
 | #8 | Add footer navigation | `feature/footer-navigation` | `develop` |
 | #9 | Configure GitHub Pages deployment | `ci/github-pages` | `develop` |
+| #10 | Docs/project workflow | `docs/project-workflow` | `develop` |
 
-تمام Featureهای اصلی پروژه با Branch مستقل توسعه داده شدند و سپس از طریق Pull Request به Branch تجمیع وارد شدند.
-
----
-
-# 29. Merge Conflict دوم
-
-Conflict دوم در مرحله مستندسازی ایجاد می‌شود.
-
-برای این مرحله آروین و علی از یک نسخه مشترک `develop` روی دو Branch مستندسازی جداگانه کار می‌کنند:
-
-```text
-docs/project-workflow
-docs/git-questions
-```
-
-آروین گزارش اصلی آزمایش را در README توسعه می‌دهد و علی پاسخ هفت سؤال آزمایش را به README اضافه می‌کند.
-
-از آنجا که هر دو Branch روی `README.md` تغییر خواهند داشت، پس از Merge شدن Branch اول به `develop` و Sync شدن Branch دوم، Conflict دوم روی `README.md` ایجاد و به‌صورت دستی Resolve خواهد شد.
-
-> پس از انجام Conflict دوم، جزئیات واقعی و مستندات آن جایگزین این توضیح خواهند شد.
+پس از Resolve شدن Conflict دوم، Branch `docs/git-questions` نیز با Pull Request وارد `develop` خواهد شد.
 
 ---
 
-# 30. محافظت از Branch `main`
+# 32. محافظت از Branch `main`
 
-در مرحله نهایی Repository، Branch `main` با Branch Protection / Ruleset محافظت خواهد شد تا ادغام تغییرات به آن فقط از طریق Pull Request انجام شود.
+در مرحله نهایی Repository، Branch `main` باید با Branch Protection / Ruleset محافظت شود تا ادغام تغییرات به آن فقط از طریق Pull Request انجام شود.
 
 جریان نهایی:
 
@@ -894,35 +902,28 @@ develop
  main
 ```
 
-پس از اعمال Protection، امکان توسعه مستقیم روی `main` مبنای Workflow پروژه نخواهد بود.
-
-> تصویر این مرحله پس از اعمال تنظیمات به پوشه `screenshots` اضافه و در نسخه نهایی گزارش Reference خواهد شد.
+پس از اعمال Protection، تصویر مربوط به تنظیمات به مستندات اضافه خواهد شد.
 
 ---
 
-# 31. Deployment نهایی
+# 33. Deployment نهایی
 
-پس از تکمیل Conflict دوم، پاسخ سؤال‌ها و Branch Protection، PR نهایی زیر ایجاد خواهد شد:
+پس از تکمیل Branch Protection و Merge نهایی:
 
 ```text
 develop -> main
 ```
 
-با Merge شدن این PR، Workflow فایل `deploy.yml` به دلیل Trigger روی `main` اجرا می‌شود.
+Workflow فایل `deploy.yml` اجرا خواهد شد.
 
-پس از اجرای موفق GitHub Actions، نسخه نهایی از آدرس زیر در دسترس خواهد بود:
+- **GitHub Actions:** https://github.com/ArvinPr/student-productivity-dashboard/actions
+- **GitHub Pages:** https://ArvinPr.github.io/student-productivity-dashboard/
 
-**<https://ArvinPr.github.io/student-productivity-dashboard/>**
-
-و نتیجه اجرای Workflow در:
-
-**<https://github.com/ArvinPr/student-productivity-dashboard/actions>**
-
-قابل مشاهده خواهد بود.
+پس از اجرای موفق Workflow، لینک Pages به‌صورت عملی تست خواهد شد.
 
 ---
 
-# 32. استفاده از هوش مصنوعی
+# 34. استفاده از هوش مصنوعی
 
 در انجام این آزمایش از ChatGPT به‌عنوان دستیار استفاده شد.
 
@@ -953,33 +954,350 @@ develop -> main
 
 تمام دستورات و تغییرات توسط اعضای گروه روی سیستم خود اجرا و بررسی شدند.
 
-گزارش خلاصه‌ی مکالمه شامل Promptهای مهم و پاسخ‌های مدل در فایل زیر قرار می‌گیرد:
+گزارش خلاصه مکالمه شامل Promptهای مهم و پاسخ‌های مدل در فایل زیر قرار دارد:
 
 ```text
 chatgpt_interaction_log.md
 ```
 
-همچنین برای رعایت کامل دستورالعمل درس، آرشیو کامل Promptهای استفاده‌شده باید به مستندات نهایی Repository اضافه شود.
+---
+
+# 35. پاسخ پرسش‌های آزمایش
+
+## 35.1. پوشه‌ی `.git` چیست؟ چه اطلاعاتی در آن ذخیره می‌شود؟ با چه دستوری ساخته می‌شود؟
+
+پوشه‌ی `.git` هسته‌ی یک Repository محلی Git است. زمانی که داخل یک پوشه دستور زیر را اجرا می‌کنیم:
+
+```bash
+git init
+```
+
+Git یک Repository ایجاد می‌کند و اطلاعات مربوط به مدیریت نسخه‌ها را داخل پوشه‌ی `.git` نگه می‌دارد.
+
+مهم‌ترین اطلاعات موجود در این پوشه عبارت‌اند از:
+
+- Object Database در مسیر `objects/`
+- Referenceها در `refs/`
+- فایل `HEAD`
+- فایل `config`
+- فایل `index`
+- Reflogها در `logs/`
+- Hookها و فایل‌های داخلی Git
+
+بنابراین اگر پوشه‌ی `.git` حذف شود، فایل‌های پروژه ممکن است باقی بمانند، اما اطلاعات Repository مانند Commit History، Branchها و تنظیمات Git از بین می‌روند.
 
 ---
 
-# 33. پاسخ پرسش‌های آزمایش
+## 35.2. منظور از Atomic بودن در Atomic Commit و Atomic Pull Request چیست؟
 
-پاسخ هفت سؤال صورت آزمایش توسط **علی مجیدی** تهیه می‌شود و در Branch مستندسازی مربوط به ایشان به همین README اضافه خواهد شد.
+Atomic بودن یعنی یک واحد تغییر یک هدف مشخص و مستقل داشته باشد و چند تغییر نامرتبط را با هم ترکیب نکند.
 
-سؤال‌ها شامل موضوعات زیر هستند:
+### Atomic Commit
 
-1. پوشه `.git`
-2. Atomic Commit و Atomic Pull Request
-3. `fetch`، `pull`، `merge`، `rebase` و `cherry-pick`
-4. `reset`، `revert`، `restore`، `switch` و `checkout`
-5. Stage / Index و `stash`
-6. Snapshot و ارتباط آن با Commit
-7. Local Repository و Remote Repository
+یک Atomic Commit باید یک تغییر منطقی مشخص را انجام دهد.
+
+مثلاً:
+
+```text
+implement navigation bar
+add theme toggle
+make navigation responsive
+```
+
+بهتر از یک Commit بزرگ شامل همه این تغییرات است.
+
+مزایا:
+
+- History خواناتر می‌شود.
+- Review ساده‌تر می‌شود.
+- Revert کردن یک تغییر مستقل آسان‌تر است.
+- پیدا کردن علت Bug ساده‌تر می‌شود.
+
+### Atomic Pull Request
+
+یک PR نیز بهتر است یک Feature، Bug Fix یا هدف مشخص را پوشش دهد.
+
+برای مثال:
+
+```text
+Add responsive styles
+```
+
+یک PR متمرکزتر و قابل Reviewتر از PR بزرگی است که هم‌زمان Responsive Design، README، Bug Fix و Workflow را تغییر دهد.
 
 ---
 
-# 34. وضعیت الزامات آزمایش تا این مرحله
+## 35.3. تفاوت `fetch`، `pull`، `merge`، `rebase` و `cherry-pick`
+
+### `git fetch`
+
+اطلاعات جدید Remote را دریافت می‌کند اما آن‌ها را مستقیماً وارد Branch فعلی نمی‌کند.
+
+```bash
+git fetch origin
+```
+
+### `git pull`
+
+ابتدا اطلاعات Remote را دریافت و سپس آن‌ها را با Branch فعلی Integrate می‌کند.
+
+```text
+git pull ≈ git fetch + integration
+```
+
+### `git merge`
+
+History دو Branch را با هم ترکیب می‌کند.
+
+```bash
+git merge develop
+```
+
+در صورت وجود تغییر ناسازگار ممکن است Conflict ایجاد شود.
+
+### `git rebase`
+
+Commitهای یک Branch را روی Base جدید دوباره اعمال می‌کند و معمولاً History خطی‌تری می‌سازد.
+
+```bash
+git rebase develop
+```
+
+چون Commitها دوباره ساخته می‌شوند، Hash آن‌ها تغییر می‌کند.
+
+### `git cherry-pick`
+
+یک Commit مشخص را انتخاب و تغییر آن را روی Branch فعلی اعمال می‌کند.
+
+```bash
+git cherry-pick <commit-hash>
+```
+
+خلاصه:
+
+```text
+fetch       → دریافت اطلاعات Remote
+pull        → دریافت و Integrate کردن
+merge       → ترکیب دو History
+rebase      → اعمال دوباره Commitها روی Base جدید
+cherry-pick → اعمال یک Commit مشخص
+```
+
+---
+
+## 35.4. تفاوت `reset`، `revert`، `restore`، `switch` و `checkout`
+
+### `git reset`
+
+برای تغییر موقعیت `HEAD` و در بعضی حالت‌ها تغییر Index و Working Tree استفاده می‌شود.
+
+حالت‌های معروف:
+
+```bash
+git reset --soft
+git reset --mixed
+git reset --hard
+```
+
+- `--soft`: فقط `HEAD`
+- `--mixed`: `HEAD` و Stage
+- `--hard`: `HEAD`، Stage و Working Tree
+
+### `git revert`
+
+History قبلی را حذف نمی‌کند. یک Commit جدید می‌سازد که اثر Commit قبلی را معکوس می‌کند.
+
+```bash
+git revert <commit-hash>
+```
+
+### `git restore`
+
+برای Restore کردن فایل‌ها در Working Tree یا Stage استفاده می‌شود.
+
+```bash
+git restore index.html
+git restore --staged index.html
+```
+
+### `git switch`
+
+برای جابه‌جایی بین Branchها:
+
+```bash
+git switch develop
+git switch -c feature/example
+```
+
+### `git checkout`
+
+دستور قدیمی‌تر و چندمنظوره‌ای است که هم برای Branch و هم Restore فایل استفاده می‌شد.
+
+```text
+git switch  → کار با Branchها
+git restore → Restore فایل‌ها
+```
+
+---
+
+## 35.5. Stage یا Index چیست؟ `stash` چه کاری انجام می‌دهد؟
+
+Stage یا **Staging Area** فضای میانی بین Working Directory و Commit است.
+
+```text
+Working Directory
+       |
+     git add
+       v
+Stage / Index
+       |
+   git commit
+       v
+Repository
+```
+
+با `git add` انتخاب می‌کنیم کدام تغییرات وارد Commit بعدی شوند.
+
+### `git stash`
+
+برای ذخیره موقت تغییرات ناتمام محلی استفاده می‌شود:
+
+```bash
+git stash
+```
+
+نمایش Stashها:
+
+```bash
+git stash list
+```
+
+برگرداندن:
+
+```bash
+git stash apply
+```
+
+یا:
+
+```bash
+git stash pop
+```
+
+برای قرار دادن فایل‌های Untracked در Stash نیز می‌توان از:
+
+```bash
+git stash -u
+```
+
+استفاده کرد.
+
+---
+
+## 35.6. Snapshot چیست و چه ارتباطی با Commit دارد؟
+
+در Git بهتر است Commitها را **Snapshot** در نظر بگیریم، نه Diff.
+
+Snapshot یعنی نمای وضعیت پروژه در یک لحظه مشخص.
+
+به‌صورت مفهومی:
+
+```text
+Commit A → Snapshot A
+Commit B → Snapshot B
+Commit C → Snapshot C
+```
+
+هر Commit به یک Tree اشاره می‌کند که وضعیت فایل‌ها و Directoryهای پروژه در آن لحظه را نمایش می‌دهد.
+
+وقتی `git diff` اجرا می‌شود، Diff با مقایسه دو Snapshot محاسبه می‌شود.
+
+هر Commit علاوه بر Snapshot، اطلاعاتی مانند موارد زیر دارد:
+
+- Parent Commit
+- Author
+- Committer
+- زمان
+- Commit Message
+
+بنابراین:
+
+> Commit یک Snapshot از وضعیت پروژه را معرفی می‌کند و Diff نتیجه مقایسه Snapshotها است.
+
+---
+
+## 35.7. تفاوت Local Repository و Remote Repository چیست؟
+
+### Local Repository
+
+Repositoryای است که روی سیستم توسعه‌دهنده قرار دارد.
+
+دستورهایی مانند موارد زیر بدون نیاز به اینترنت قابل انجام‌اند:
+
+```bash
+git status
+git add
+git commit
+git branch
+git switch
+git log
+```
+
+### Remote Repository
+
+Repository دیگری است که Git محلی از طریق یک نام و آدرس آن را می‌شناسد.
+
+در این آزمایش Repository روی GitHub با نام Remote زیر ثبت شده است:
+
+```text
+origin
+```
+
+مشاهده Remoteها:
+
+```bash
+git remote -v
+```
+
+ارسال تغییرات:
+
+```bash
+git push origin develop
+```
+
+دریافت اطلاعات:
+
+```bash
+git fetch origin
+```
+
+یا:
+
+```bash
+git pull origin develop
+```
+
+تفاوت کلی:
+
+```text
+Local Repository
+- روی سیستم توسعه‌دهنده
+- محل انجام توسعه
+- دارای History محلی
+- Commit و Branch بدون اینترنت
+
+Remote Repository
+- Repository دیگری که از طریق URL/Path شناخته می‌شود
+- در پروژه ما روی GitHub است
+- برای اشتراک‌گذاری و همکاری
+- تبادل اطلاعات با push / fetch / pull
+```
+
+Remote الزاماً GitHub نیست و می‌تواند هر Repository دیگری باشد که از Repository فعلی به آن Reference داده شده است.
+
+---
+
+# 36. وضعیت الزامات آزمایش
 
 | الزام | وضعیت |
 |---|---|
@@ -990,19 +1308,19 @@ chatgpt_interaction_log.md
 | حداقل ۳ Branch معنادار | ✅ انجام شده |
 | استفاده از Pull Request | ✅ انجام شده |
 | Conflict اول | ✅ انجام شده |
-| Conflict دوم | ⏳ مرحله مستندسازی |
+| Conflict دوم | ✅ ایجاد و Resolve در حال نهایی‌شدن |
 | GitHub Actions Workflow | ✅ انجام شده |
 | GitHub Pages Workflow | ✅ آماده |
-| Deploy نهایی Pages | ⏳ بعد از Merge به `main` |
+| Deploy نهایی Pages | ⏳ بعد از Merge نهایی به `main` |
 | Protect کردن `main` | ⏳ مرحله نهایی |
-| گزارش فارسی در README | ✅ در حال تکمیل |
-| پاسخ ۷ سؤال | ⏳ توسط علی |
-| مستندسازی AI | ✅ گزارش اولیه تهیه شده |
+| گزارش فارسی در README | ✅ انجام شده |
+| پاسخ ۷ سؤال | ✅ انجام شده |
+| مستندسازی AI | ✅ انجام شده |
 | فیلم نهایی | ⏳ مرحله تحویل |
 
 ---
 
-# 35. فهرست مستندات تصویری
+# 37. فهرست مستندات تصویری
 
 تصاویر در پوشه زیر نگه‌داری می‌شوند:
 
@@ -1021,27 +1339,39 @@ screenshots/
 | 25 تا 30 | Main Content و PR #4 |
 | 31 تا 34 | Responsive Design و PR #5 |
 | 35 تا 39 | JavaScript و PR #6 |
-| 40 تا 42 | دو Footer Branch و PR #7 |
+| 40 تا 42 | Footer Branchها و PR #7 |
 | 43 تا 46 | Conflict اول و Resolve آن |
 | 47 | PR #8 و Review |
 | 48 تا 50 | GitHub Actions و PR #9 |
+| 52 | Commit پاسخ سؤال‌های Git |
+| 53 | PR #10 گزارش پروژه |
+| 54 | Conflict دوم روی README |
 
 ---
 
-# 36. جمع‌بندی
+# 38. جمع‌بندی
 
 در این آزمایش هدف صرفاً تولید یک صفحه Static نبود. پروژه به شکلی انجام شد که روند واقعی توسعه گروهی با Git قابل مشاهده باشد.
 
 هر قابلیت روی Branch معنادار توسعه پیدا کرد، تغییرات در Commitهای مشخص ثبت شدند و Featureها با Pull Request وارد `develop` شدند. هر دو عضو گروه در Git و Frontend مشارکت داشتند.
 
-در طول توسعه یک Bug واقعی در ساختار HTML شناسایی و اصلاح شد، Responsive Design و تعاملات JavaScript به‌صورت Featureهای جدا توسعه داده شدند، یک Merge Conflict واقعی ناشی از تغییر هم‌زمان دو عضو Resolve شد و GitHub Actions برای Deployment خودکار روی GitHub Pages تنظیم شد.
+در طول توسعه:
 
-مراحل باقی‌مانده قبل از تحویل نهایی عبارت‌اند از:
+- یک Bug واقعی در ساختار HTML شناسایی و اصلاح شد.
+- Responsive Design در Branch مستقل توسعه داده شد.
+- تعاملات JavaScript به‌صورت مرحله‌ای اضافه شدند.
+- Dark Mode و `localStorage` پیاده‌سازی شدند.
+- دو Merge Conflict مستقل ایجاد شدند.
+- Conflict اول روی کد Frontend و Conflict دوم روی README رخ داد.
+- GitHub Actions برای Deployment خودکار تنظیم شد.
+- گزارش پروژه، مستندات AI و پاسخ هفت سؤال تکمیل شدند.
 
-1. ایجاد و حل Conflict دوم روی README
-2. اضافه‌شدن پاسخ هفت سؤال توسط علی
+مراحل باقی‌مانده برای تحویل نهایی:
+
+1. Commit کردن Resolve نهایی Conflict دوم
+2. Merge کردن `docs/git-questions` به `develop`
 3. محافظت از `main`
 4. Pull Request نهایی `develop -> main`
 5. اجرای موفق GitHub Actions
-6. بررسی لینک GitHub Pages
-7. تکمیل نهایی گزارش و ضبط فیلم
+6. بررسی عملی لینک GitHub Pages
+7. ضبط فیلم نهایی
