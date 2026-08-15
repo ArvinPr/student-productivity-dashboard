@@ -13,13 +13,11 @@
 - **GitHub Actions:** https://github.com/ArvinPr/student-productivity-dashboard/actions
 - **GitHub Pages:** https://ArvinPr.github.io/student-productivity-dashboard/
 
-> توجه: Workflow مربوط به GitHub Pages طوری تنظیم شده است که پس از ورود نسخه نهایی به `main` اجرا شود. بنابراین لینک Pages پس از اجرای موفق Workflow نهایی قابل بررسی خواهد بود.
-
 ---
 
 # 1. هدف آزمایش
 
-هدف این آزمایش پیاده‌سازی یک **Static Frontend** و طی‌کردن یک فرآیند توسعه گروهی واقعی با Git و GitHub بود. بنابراین علاوه بر پیاده‌سازی رابط کاربری، موارد زیر نیز در طول پروژه انجام شدند:
+هدف این آزمایش پیاده‌سازی یک **Static Frontend** و طی‌کردن یک فرآیند توسعه گروهی واقعی با Git و GitHub بود. در نتیجه، علاوه بر ساخت رابط کاربری، موارد زیر نیز در طول پروژه انجام شدند:
 
 - استفاده از Git در تمام مراحل توسعه
 - استفاده از `.gitignore`
@@ -30,17 +28,21 @@
 - ایجاد و Resolve کردن حداقل دو Merge Conflict
 - استفاده از Kanban برای مدیریت Taskها
 - مشارکت هر دو عضو گروه در توسعه و Git
-- راه‌اندازی GitHub Actions برای استقرار خودکار
-- آماده‌سازی GitHub Pages برای انتشار نسخه نهایی
+- راه‌اندازی GitHub Actions
+- محافظت از Branch اصلی
+- استقرار پروژه روی GitHub Pages
 - تهیه گزارش کامل در `README.md`
+- مستندسازی استفاده از هوش مصنوعی
 
-پروژه به‌صورت **HTML، CSS و JavaScript خالص** پیاده‌سازی شد تا تمرکز اصلی آزمایش علاوه بر Frontend، روی Git Workflow، Branching، Pull Request، Conflict و Continuous Deployment باقی بماند.
+پروژه با **HTML، CSS و JavaScript خالص** پیاده‌سازی شد تا تمرکز اصلی آزمایش علاوه بر Frontend، روی Git Workflow، Branching، Pull Request، Conflict Resolution و Continuous Deployment باقی بماند.
 
 ---
 
 # 2. معرفی پروژه StudyFlow
 
-پروژه نهایی یک داشبورد ساده برای مدیریت فعالیت‌های دانشجویی است. نام رابط کاربری **StudyFlow** انتخاب شد و ساختار صفحه به چند بخش تقسیم شد:
+پروژه نهایی یک داشبورد ساده برای مدیریت فعالیت‌های دانشجویی است. نام رابط کاربری **StudyFlow** انتخاب شد.
+
+ساختار اصلی صفحه شامل بخش‌های زیر است:
 
 - Navbar
 - Hero Section
@@ -49,7 +51,7 @@
 - Goals
 - Footer
 
-قابلیت‌هایی که در طول توسعه به پروژه اضافه شدند:
+قابلیت‌های اصلی که در طول توسعه به پروژه اضافه شدند:
 
 - طراحی Navbar با لینک‌های داخلی
 - Hero Section
@@ -62,15 +64,15 @@
 - ذخیره Theme انتخاب‌شده با `localStorage`
 - Footer Copyright
 - Footer Navigation
-- استقرار خودکار با GitHub Actions
+- استقرار با GitHub Actions و GitHub Pages
 
-روند توسعه به‌صورت مرحله‌ای انجام شد و قابلیت‌ها یک‌جا به پروژه اضافه نشدند.
+روند توسعه مرحله‌ای بود و قابلیت‌ها به‌صورت یکجا وارد پروژه نشدند. برای هر بخش Branch و Commit معنادار ایجاد شد.
 
 ---
 
 # 3. مدیریت پروژه با Kanban
 
-در ابتدای آزمایش یک Kanban Board برای مدیریت فعالیت‌های تیم ایجاد شد. Taskها هم‌زمان با پیشرفت پروژه به بورد اضافه و وضعیت آن‌ها به‌روزرسانی شد.
+از ابتدای آزمایش یک Kanban Board برای مدیریت فعالیت‌های تیم ایجاد شد. هدف این بود که بورد فقط به‌عنوان یک مستند نهایی استفاده نشود، بلکه هم‌زمان با روند واقعی پروژه تغییر کند.
 
 وضعیت‌های اصلی استفاده‌شده:
 
@@ -82,7 +84,7 @@ Review
 Done
 ```
 
-برای Taskها مواردی مانند Assignee، Priority، Size و Estimate نیز مشخص شد. مسئول هر Task نیز تعیین شد تا سهم هر عضو در روند پروژه قابل مشاهده باشد.
+برای Taskها در صورت نیاز مواردی مانند Assignee، Priority، Size و Estimate مشخص شدند.
 
 نمونه Taskهای اصلی:
 
@@ -101,7 +103,7 @@ Done
 - `Document Project Workflow`
 - `Answer Git Questions`
 
-Taskهایی که نیاز به Pull Request داشتند پس از پایان کدنویسی ابتدا وارد `Review` شده و پس از Merge به `Done` منتقل می‌شدند.
+Taskهایی که نیاز به Pull Request داشتند، پس از پایان کدنویسی ابتدا وارد `Review` شده و بعد از Merge به `Done` منتقل شدند.
 
 ---
 
@@ -125,7 +127,8 @@ Taskهایی که نیاز به Pull Request داشتند پس از پایان �
 - ذخیره Theme با `localStorage`
 - پیاده‌سازی Footer Copyright
 - راه‌اندازی GitHub Actions
-- مدیریت بخش مهمی از Pull Requestها و Reviewها
+- تنظیم Branch Protection برای `main`
+- مدیریت بخشی از Pull Requestها و Reviewها
 - مدیریت Kanban و هماهنگی مراحل
 - تهیه گزارش اصلی آزمایش
 - مسئولیت فیلم و تحویل نهایی
@@ -148,13 +151,13 @@ Taskهایی که نیاز به Pull Request داشتند پس از پایان �
 - مشارکت در Review
 - پاسخ به هفت سؤال Git در گزارش
 
-تقسیم وظایف به‌گونه‌ای انجام شد که هر دو نفر علاوه بر Frontend، تجربه واقعی Branch، Commit، Push و Pull Request داشته باشند.
+تقسیم کار به شکلی انجام شد که هر دو نفر علاوه بر Frontend، در Branch، Commit، Push، Pull Request و Resolve کردن Conflict نیز مشارکت داشته باشند.
 
 ---
 
-# 5. مرحله اول — ایجاد Repository و اولین Commit
+# 5. ایجاد Repository و اولین Commit
 
-کار با ایجاد یک Repository محلی آغاز شد. Git روی پروژه Initialize شد و نام Branch اصلی روی `main` قرار گرفت.
+کار با ایجاد Repository محلی آغاز شد. Git روی پروژه Initialize شد و نام Branch اصلی روی `main` قرار گرفت.
 
 یک `README.md` اولیه ایجاد شد و اولین Commit پروژه با پیام زیر ثبت شد:
 
@@ -164,7 +167,7 @@ initialize project repository
 
 سپس Repository محلی به Repository موجود در GitHub متصل و Branch `main` برای اولین بار Push شد.
 
-در این مرحله مفاهیم Working Tree، Staging Area و Commit عملاً استفاده شدند.
+در این مرحله مفاهیم Working Tree، Staging Area و Commit به‌صورت عملی استفاده شدند.
 
 **مستندات:** [تصویر 1](./screenshots/1.png)، [تصویر 2](./screenshots/2.png)
 
@@ -172,15 +175,15 @@ initialize project repository
 
 # 6. اصلاح Encoding فایل README
 
-پس از اولین Commit متوجه شدیم Git تغییر فایل `README.md` را به شکل معمول یک فایل متنی نمایش نمی‌دهد. علت، Encoding اولیه فایل بود.
+پس از اولین Commit مشخص شد فایل `README.md` با Encoding نامناسب ذخیره شده است.
 
-فایل در VS Code با Encoding مناسب `UTF-8` ذخیره شد و اصلاح با یک Commit مستقل ثبت شد:
+فایل در VS Code با Encoding مناسب `UTF-8` ذخیره شد و اصلاح آن با Commit مستقل زیر ثبت شد:
 
 ```text
 fix README encoding
 ```
 
-این Commit برای رفع یک مشکل واقعی ایجاد شد.
+این Commit برای رفع یک مشکل واقعی ایجاد شد و صرفاً جهت افزایش تعداد Commitها نبود.
 
 **مستند:** [تصویر 3](./screenshots/3.png)
 
@@ -188,13 +191,13 @@ fix README encoding
 
 # 7. ایجاد Branch `develop` و تعریف Branch Strategy
 
-برای اینکه توسعه مستقیماً روی `main` انجام نشود، Branch جدیدی با نام زیر ایجاد شد:
+برای جلوگیری از توسعه مستقیم روی `main`، Branch زیر ایجاد شد:
 
 ```text
 develop
 ```
 
-`develop` روی GitHub Push شد و از این مرحله به بعد به‌عنوان Branch تجمیع Featureها مورد استفاده قرار گرفت.
+از این مرحله به بعد `develop` به‌عنوان Branch تجمیع Featureها استفاده شد.
 
 ساختار کلی Workflow تیم:
 
@@ -231,7 +234,7 @@ Branchهای اصلی استفاده‌شده:
 | `docs/project-workflow` | گزارش اصلی آزمایش |
 | `docs/git-questions` | پاسخ پرسش‌های Git |
 
-در نتیجه شرط «حداقل سه Branch معنادار» با تعداد بیشتری Branch واقعی و مرتبط با توسعه پوشش داده شد.
+در نتیجه شرط حداقل سه Branch معنادار با تعداد بیشتری Branch واقعی و مرتبط با روند توسعه پوشش داده شد.
 
 **مستند:** [تصویر 4](./screenshots/4.png)
 
@@ -265,7 +268,7 @@ add gitignore configuration
 
 # 9. ایجاد Base Project Structure
 
-برای ایجاد ساختار اولیه، Branch زیر از `develop` ساخته شد:
+برای ایجاد ساختار اولیه پروژه Branch زیر از `develop` ساخته شد:
 
 ```text
 feature/base-structure
@@ -291,7 +294,7 @@ create base project structure
 
 # 10. Pull Request شماره 1 — Base Project Structure
 
-پس از پایان Base Structure، یک Pull Request با مسیر زیر ایجاد شد:
+پس از پایان Base Structure یک Pull Request با مسیر زیر ایجاد شد:
 
 ```text
 feature/base-structure -> develop
@@ -387,11 +390,13 @@ Commit اصلاح:
 restore HTML document structure
 ```
 
-پس از اصلاح، رابط کاربری دوباره در Browser تست شد و Styleها به‌درستی اعمال شدند.
+پس از اصلاح، رابط کاربری مجدداً در Browser تست شد و Styleها به‌درستی اعمال شدند.
 
 **نتیجه پس از اصلاح:** [تصویر 22](./screenshots/22.png)
 
 **ثبت اصلاح:** [تصویر 23](./screenshots/23.png)
+
+این مرحله یک نمونه واقعی از Debug در روند توسعه پروژه بود.
 
 ---
 
@@ -418,7 +423,7 @@ PR شماره 3 شامل چهار Commit بود:
 
 # 15. پیاده‌سازی Main Content توسط علی
 
-علی ابتدا `develop` را با تغییرات PR شماره 3 Sync کرد و سپس Branch جدید ایجاد کرد:
+علی ابتدا `develop` را با تغییرات PR شماره 3 Sync کرد و سپس Branch جدید زیر را ایجاد کرد:
 
 ```text
 feature/main-sections
@@ -426,7 +431,7 @@ feature/main-sections
 
 **دریافت آخرین تغییرات:** [تصویر 25](./screenshots/25.png)
 
-Main Content به چند Commit تقسیم شد.
+Main Content در چند Commit مستقل توسعه داده شد.
 
 ## 15.1. Features
 
@@ -660,7 +665,7 @@ Markerهای Conflict:
 - Copyright آروین
 - Footer Navigation علی
 
-Markerها حذف و محتوای نهایی فایل‌ها به‌صورت دستی تنظیم شد.
+Markerهای Conflict حذف و محتوای نهایی فایل‌ها به‌صورت دستی تنظیم شد.
 
 **وضعیت حین Resolve:** [تصویر 45](./screenshots/45.png)
 
@@ -684,7 +689,7 @@ PR توسط آروین Review و Approve شد و سپس وارد `develop` شد.
 
 ---
 
-# 25. GitHub Actions و استقرار خودکار
+# 25. GitHub Actions و Workflow استقرار
 
 برای بخش Continuous Deployment یک Branch مستقل ایجاد شد:
 
@@ -702,7 +707,7 @@ ci/github-pages
 
 **ایجاد Branch و Workflow:** [تصویر 48](./screenshots/48.png)
 
-Workflow مراحل زیر را انجام می‌دهد:
+Workflow برای انجام مراحل زیر تنظیم شد:
 
 1. Checkout کردن Repository
 2. آماده‌سازی GitHub Pages
@@ -711,7 +716,7 @@ Workflow مراحل زیر را انجام می‌دهد:
 
 از آنجا که پروژه HTML/CSS/JavaScript خالص است، Build Step جداگانه‌ای مانند `npm run build` نیاز نبود.
 
-Trigger اصلی Deployment روی Branch `main` تنظیم شد.
+Workflow برای Push روی `main` تنظیم شد و امکان اجرای دستی با `workflow_dispatch` نیز در آن قرار گرفت.
 
 Commit:
 
@@ -735,11 +740,6 @@ ci/github-pages -> develop
 
 **مستند:** [تصویر 50](./screenshots/50.png)
 
-## لینک‌های Deployment
-
-- **GitHub Actions:** https://github.com/ArvinPr/student-productivity-dashboard/actions
-- **GitHub Pages:** https://ArvinPr.github.io/student-productivity-dashboard/
-
 ---
 
 # 27. مستندسازی پروژه توسط آروین
@@ -756,16 +756,18 @@ docs/project-workflow
 - فایل `chatgpt_interaction_log.md` را برای مستندسازی تعامل با ChatGPT اضافه کرد.
 - تصاویر مراحل پروژه را در پوشه `screenshots/` قرار داد.
 
-Commitهای اصلی این Branch:
+Commitهای اصلی:
 
 ```text
 document project workflow
 add project screenshots
 ```
 
+**مستند ایجاد Branch و ثبت گزارش:** [تصویر 51](./screenshots/51.png)
+
 سپس PR شماره 10 ساخته و وارد `develop` شد.
 
-**مستند:** [تصویر 53](./screenshots/53.png)
+**مستند PR:** [تصویر 53](./screenshots/53.png)
 
 ---
 
@@ -800,7 +802,7 @@ docs/project-workflow
 docs/git-questions
 ```
 
-آروین گزارش کامل پروژه را در `README.md` نوشته بود و علی نیز پاسخ هفت سؤال آزمایش را در همان فایل `README.md` نوشته بود.
+آروین گزارش کامل پروژه را در `README.md` نوشته بود و علی پاسخ هفت سؤال آزمایش را در همان فایل `README.md` نوشته بود.
 
 ابتدا Branch آروین با Pull Request شماره 10 وارد `develop` شد.
 
@@ -819,21 +821,39 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 **مستند Conflict دوم:** [تصویر 54](./screenshots/54.png)
 
-برای Resolve کردن Conflict، گزارش اصلی پروژه از `develop` به‌عنوان ساختار اصلی README حفظ شد و پاسخ هفت سؤال علی نیز در بخش «پاسخ پرسش‌های آزمایش» به همان فایل اضافه شد.
+برای Resolve کردن Conflict، گزارش اصلی پروژه از `develop` به‌عنوان ساختار اصلی README حفظ شد و پاسخ هفت سؤال علی در بخش «پاسخ پرسش‌های آزمایش» به همان فایل اضافه شد.
 
-به این ترتیب هیچ‌یک از مستندات دو عضو حذف نشد و نسخه نهایی README شامل هر دو بخش شد.
-
-Commit نهایی Resolve این Conflict بعد از Stage شدن README ثبت می‌شود:
+سپس فایل حل‌شده Stage و Merge با Commit زیر نهایی شد:
 
 ```text
 resolve README merge conflict
 ```
 
+**مستند Resolve و Commit Conflict دوم:** [تصویر 55](./screenshots/55.png)
+
+در نتیجه هیچ‌یک از مستندات دو عضو حذف نشد و نسخه نهایی README شامل هر دو بخش شد.
+
 ---
 
-# 30. Commitهای معنادار پروژه
+# 30. Pull Request شماره 11 — تکمیل مستندات
 
-تا پیش از Commit حل Conflict دوم، حداقل ۲۵ Commit معنادار بدون احتساب Merge Commitها ثبت شده است.
+پس از Resolve شدن Conflict دوم، Branch `docs/git-questions` با PR شماره 11 وارد `develop` شد.
+
+عنوان PR:
+
+```text
+Add Git questions and resolve documentation conflict
+```
+
+این PR شامل پاسخ سؤال‌های Git و Commit حل Conflict دوم بود.
+
+**مستند:** [تصویر 56](./screenshots/56.png)
+
+---
+
+# 31. Commitهای معنادار پروژه
+
+در طول پروژه بیش از ۲۰ Commit معنادار بدون احتساب Merge Commitها ثبت شد.
 
 مهم‌ترین Commitها:
 
@@ -864,12 +884,13 @@ resolve README merge conflict
 | 23 | `document project workflow` | آروین |
 | 24 | `add project screenshots` | آروین |
 | 25 | `answer Git questions` | علی |
+| 26 | `resolve README merge conflict` | علی |
 
-در نتیجه شرط حداقل ۲۰ Commit معنادار به‌طور کامل رعایت شده است.
+در نتیجه شرط حداقل ۲۰ Commit معنادار به‌طور کامل رعایت شد.
 
 ---
 
-# 31. Pull Requestهای اصلی
+# 32. Pull Requestهای اصلی
 
 | PR | عنوان | Source | Target |
 |---:|---|---|---|
@@ -883,47 +904,123 @@ resolve README merge conflict
 | #8 | Add footer navigation | `feature/footer-navigation` | `develop` |
 | #9 | Configure GitHub Pages deployment | `ci/github-pages` | `develop` |
 | #10 | Docs/project workflow | `docs/project-workflow` | `develop` |
-
-پس از Resolve شدن Conflict دوم، Branch `docs/git-questions` نیز با Pull Request وارد `develop` خواهد شد.
+| #11 | Add Git questions and resolve documentation conflict | `docs/git-questions` | `develop` |
+| #12 | Release Student Productivity Dashboard | `develop` | `main` |
 
 ---
 
-# 32. محافظت از Branch `main`
+# 33. محافظت از Branch `main`
 
-در مرحله نهایی Repository، Branch `main` باید با Branch Protection / Ruleset محافظت شود تا ادغام تغییرات به آن فقط از طریق Pull Request انجام شود.
-
-جریان نهایی:
+برای جلوگیری از ورود مستقیم تغییرات به Branch اصلی، یک Ruleset با نام زیر ایجاد شد:
 
 ```text
-develop
-   |
-   | Pull Request
-   v
- main
+Protect main
 ```
 
-پس از اعمال Protection، تصویر مربوط به تنظیمات به مستندات اضافه خواهد شد.
+تنظیمات اصلی:
+
+- **Enforcement status:** `Active`
+- **Target branch:** `main`
+- **Bypass list:** خالی
+- **Require a pull request before merging:** فعال
+- **Required approvals:** `0`
+
+به این ترتیب ورود تغییرات به Branch اصلی بر اساس Pull Request انجام شد.
+
+**مستند تنظیم Ruleset:** [تصویر 57](./screenshots/57.png)
 
 ---
 
-# 33. Deployment نهایی
+# 34. Pull Request نهایی `develop -> main`
 
-پس از تکمیل Branch Protection و Merge نهایی:
+پس از تکمیل Frontend، Conflictها، مستندات و پاسخ سؤال‌ها، Pull Request نهایی ساخته شد:
 
 ```text
 develop -> main
 ```
 
-Workflow فایل `deploy.yml` اجرا خواهد شد.
+عنوان PR:
 
-- **GitHub Actions:** https://github.com/ArvinPr/student-productivity-dashboard/actions
-- **GitHub Pages:** https://ArvinPr.github.io/student-productivity-dashboard/
+```text
+Release Student Productivity Dashboard
+```
 
-پس از اجرای موفق Workflow، لینک Pages به‌صورت عملی تست خواهد شد.
+این PR نسخه کامل پروژه را وارد `main` کرد و با موفقیت Merge شد.
+
+**مستند PR نهایی:** [تصویر 58](./screenshots/58.png)
 
 ---
 
-# 34. استفاده از هوش مصنوعی
+# 35. اجرای اولیه GitHub Actions و بروز خطا
+
+پس از Merge شدن PR نهایی به `main`، Workflow مربوط به GitHub Pages به‌صورت خودکار Trigger شد.
+
+اجرای اولیه ناموفق بود و Workflow در Job مربوط به Build متوقف شد. خطای اصلی نشان می‌داد GitHub Pages هنوز برای Repository به‌صورت مناسب فعال نشده است.
+
+پیام خطا شامل این بخش بود:
+
+```text
+Get Pages site failed.
+Please verify that the repository has Pages enabled
+and configured to build using GitHub Actions.
+```
+
+به همین دلیل Job `deploy` نیز اجرا نشد.
+
+**مستند اجرای ناموفق اولیه:** [تصویر 59](./screenshots/59.png)
+
+این خطا مربوط به کد Frontend نبود؛ Workflow توانسته بود شروع شود، اما تنظیم Repository برای Pages هنوز کامل نشده بود.
+
+---
+
+# 36. رفع مشکل GitHub Pages
+
+برای رفع خطا، از تنظیمات Repository وارد بخش زیر شدیم:
+
+```text
+Settings -> Pages
+```
+
+در بخش Build and deployment، Source انتشار روی:
+
+```text
+GitHub Actions
+```
+
+تنظیم شد.
+
+Workflow از قبل دارای Trigger دستی `workflow_dispatch` بود. پس از اصلاح تنظیمات Pages، Workflow دوباره و این بار روی Branch `main` به‌صورت دستی اجرا شد.
+
+در اجرای دوم هر دو Job با موفقیت پایان یافتند:
+
+```text
+build  ✅
+deploy ✅
+```
+
+و Artifact مربوط به سایت نیز ایجاد شد.
+
+**مستند اجرای موفق Build و Deploy:** [تصویر 60](./screenshots/60.png)
+
+بنابراین فرآیند Deployment یک بار در شرایط واقعی Fail شد، علت خطا از خروجی GitHub Actions شناسایی شد، تنظیم Repository اصلاح شد و Workflow با موفقیت دوباره اجرا شد.
+
+---
+
+# 37. GitHub Pages نهایی
+
+پس از موفقیت Workflow، سایت از آدرس زیر در دسترس قرار گرفت:
+
+**https://ArvinPr.github.io/student-productivity-dashboard/**
+
+نسخه Deploy‌شده شامل Navbar، Hero، بخش‌های Features، Tasks و Goals، Theme Toggle و سایر قابلیت‌های توسعه‌داده‌شده است.
+
+**نسخه Deploy‌شده روی GitHub Pages:** [تصویر 61](./screenshots/61.png)
+
+در نتیجه مرحله استقرار نهایی پروژه با موفقیت انجام شد.
+
+---
+
+# 38. استفاده از هوش مصنوعی
 
 در انجام این آزمایش از ChatGPT به‌عنوان دستیار استفاده شد.
 
@@ -954,7 +1051,7 @@ Workflow فایل `deploy.yml` اجرا خواهد شد.
 
 تمام دستورات و تغییرات توسط اعضای گروه روی سیستم خود اجرا و بررسی شدند.
 
-گزارش خلاصه مکالمه شامل Promptهای مهم و پاسخ‌های مدل در فایل زیر قرار دارد:
+گزارش خلاصه مکالمه شامل Promptهای اصلی و پاسخ‌های ChatGPT در فایل زیر قرار دارد:
 
 ```text
 chatgpt_interaction_log.md
@@ -962,9 +1059,9 @@ chatgpt_interaction_log.md
 
 ---
 
-# 35. پاسخ پرسش‌های آزمایش
+# 39. پاسخ پرسش‌های آزمایش
 
-## 35.1. پوشه‌ی `.git` چیست؟ چه اطلاعاتی در آن ذخیره می‌شود؟ با چه دستوری ساخته می‌شود؟
+## 39.1. پوشه‌ی `.git` چیست؟ چه اطلاعاتی در آن ذخیره می‌شود؟ با چه دستوری ساخته می‌شود؟
 
 پوشه‌ی `.git` هسته‌ی یک Repository محلی Git است. زمانی که داخل یک پوشه دستور زیر را اجرا می‌کنیم:
 
@@ -988,7 +1085,7 @@ Git یک Repository ایجاد می‌کند و اطلاعات مربوط به �
 
 ---
 
-## 35.2. منظور از Atomic بودن در Atomic Commit و Atomic Pull Request چیست؟
+## 39.2. منظور از Atomic بودن در Atomic Commit و Atomic Pull Request چیست؟
 
 Atomic بودن یعنی یک واحد تغییر یک هدف مشخص و مستقل داشته باشد و چند تغییر نامرتبط را با هم ترکیب نکند.
 
@@ -1027,7 +1124,7 @@ Add responsive styles
 
 ---
 
-## 35.3. تفاوت `fetch`، `pull`، `merge`، `rebase` و `cherry-pick`
+## 39.3. تفاوت `fetch`، `pull`، `merge`، `rebase` و `cherry-pick`
 
 ### `git fetch`
 
@@ -1085,7 +1182,7 @@ cherry-pick → اعمال یک Commit مشخص
 
 ---
 
-## 35.4. تفاوت `reset`، `revert`، `restore`، `switch` و `checkout`
+## 39.4. تفاوت `reset`، `revert`، `restore`، `switch` و `checkout`
 
 ### `git reset`
 
@@ -1140,7 +1237,7 @@ git restore → Restore فایل‌ها
 
 ---
 
-## 35.5. Stage یا Index چیست؟ `stash` چه کاری انجام می‌دهد؟
+## 39.5. Stage یا Index چیست؟ `stash` چه کاری انجام می‌دهد؟
 
 Stage یا **Staging Area** فضای میانی بین Working Directory و Commit است.
 
@@ -1194,7 +1291,7 @@ git stash -u
 
 ---
 
-## 35.6. Snapshot چیست و چه ارتباطی با Commit دارد؟
+## 39.6. Snapshot چیست و چه ارتباطی با Commit دارد؟
 
 در Git بهتر است Commitها را **Snapshot** در نظر بگیریم، نه Diff.
 
@@ -1226,7 +1323,7 @@ Commit C → Snapshot C
 
 ---
 
-## 35.7. تفاوت Local Repository و Remote Repository چیست؟
+## 39.7. تفاوت Local Repository و Remote Repository چیست؟
 
 ### Local Repository
 
@@ -1297,7 +1394,7 @@ Remote الزاماً GitHub نیست و می‌تواند هر Repository دی�
 
 ---
 
-# 36. وضعیت الزامات آزمایش
+# 40. وضعیت نهایی الزامات آزمایش
 
 | الزام | وضعیت |
 |---|---|
@@ -1307,12 +1404,13 @@ Remote الزاماً GitHub نیست و می‌تواند هر Repository دی�
 | حداقل ۲۰ Commit معنادار | ✅ انجام شده |
 | حداقل ۳ Branch معنادار | ✅ انجام شده |
 | استفاده از Pull Request | ✅ انجام شده |
-| Conflict اول | ✅ انجام شده |
-| Conflict دوم | ✅ ایجاد و Resolve در حال نهایی‌شدن |
+| Conflict اول | ✅ انجام و Resolve شده |
+| Conflict دوم | ✅ انجام و Resolve شده |
+| محافظت از `main` | ✅ انجام شده |
 | GitHub Actions Workflow | ✅ انجام شده |
-| GitHub Pages Workflow | ✅ آماده |
-| Deploy نهایی Pages | ⏳ بعد از Merge نهایی به `main` |
-| Protect کردن `main` | ⏳ مرحله نهایی |
+| بررسی و رفع خطای Workflow | ✅ انجام شده |
+| GitHub Pages Deployment | ✅ موفق |
+| لینک سایت | ✅ فعال و بررسی شده |
 | گزارش فارسی در README | ✅ انجام شده |
 | پاسخ ۷ سؤال | ✅ انجام شده |
 | مستندسازی AI | ✅ انجام شده |
@@ -1320,7 +1418,7 @@ Remote الزاماً GitHub نیست و می‌تواند هر Repository دی�
 
 ---
 
-# 37. فهرست مستندات تصویری
+# 41. فهرست مستندات تصویری
 
 تصاویر در پوشه زیر نگه‌داری می‌شوند:
 
@@ -1342,14 +1440,22 @@ screenshots/
 | 40 تا 42 | Footer Branchها و PR #7 |
 | 43 تا 46 | Conflict اول و Resolve آن |
 | 47 | PR #8 و Review |
-| 48 تا 50 | GitHub Actions و PR #9 |
+| 48 تا 50 | GitHub Actions Workflow و PR #9 |
+| 51 | ایجاد Branch مستندسازی و ثبت گزارش |
 | 52 | Commit پاسخ سؤال‌های Git |
 | 53 | PR #10 گزارش پروژه |
 | 54 | Conflict دوم روی README |
+| 55 | Resolve و Commit Conflict دوم |
+| 56 | PR #11 و تکمیل مستندات |
+| 57 | Ruleset و محافظت از `main` |
+| 58 | PR نهایی `develop -> main` |
+| 59 | اجرای اولیه و ناموفق GitHub Actions |
+| 60 | اجرای موفق Build و Deploy بعد از اصلاح Pages |
+| 61 | نسخه Deploy‌شده روی GitHub Pages |
 
 ---
 
-# 38. جمع‌بندی
+# 42. جمع‌بندی
 
 در این آزمایش هدف صرفاً تولید یک صفحه Static نبود. پروژه به شکلی انجام شد که روند واقعی توسعه گروهی با Git قابل مشاهده باشد.
 
@@ -1357,21 +1463,22 @@ screenshots/
 
 در طول توسعه:
 
-- یک Bug واقعی در ساختار HTML شناسایی و اصلاح شد.
+- یک مشکل واقعی در ساختار HTML شناسایی و اصلاح شد.
 - Responsive Design در Branch مستقل توسعه داده شد.
 - تعاملات JavaScript به‌صورت مرحله‌ای اضافه شدند.
 - Dark Mode و `localStorage` پیاده‌سازی شدند.
-- دو Merge Conflict مستقل ایجاد شدند.
+- دو Merge Conflict مستقل ایجاد و Resolve شدند.
 - Conflict اول روی کد Frontend و Conflict دوم روی README رخ داد.
-- GitHub Actions برای Deployment خودکار تنظیم شد.
-- گزارش پروژه، مستندات AI و پاسخ هفت سؤال تکمیل شدند.
+- GitHub Actions برای Deployment تنظیم شد.
+- Branch `main` با Ruleset فعال محافظت شد.
+- نسخه نهایی از طریق PR شماره 12 از `develop` وارد `main` شد.
+- اجرای اولیه Workflow به دلیل کامل نبودن تنظیم GitHub Pages ناموفق بود.
+- خطا از خروجی GitHub Actions شناسایی شد.
+- Source انتشار GitHub Pages روی `GitHub Actions` تنظیم شد.
+- Workflow مجدداً اجرا شد و هر دو Job `build` و `deploy` با موفقیت پایان یافتند.
+- پروژه با موفقیت روی GitHub Pages منتشر شد.
+- گزارش پروژه، مستندات AI و پاسخ هفت سؤال نیز تکمیل شدند.
 
-مراحل باقی‌مانده برای تحویل نهایی:
+**نسخه نهایی پروژه:**
 
-1. Commit کردن Resolve نهایی Conflict دوم
-2. Merge کردن `docs/git-questions` به `develop`
-3. محافظت از `main`
-4. Pull Request نهایی `develop -> main`
-5. اجرای موفق GitHub Actions
-6. بررسی عملی لینک GitHub Pages
-7. ضبط فیلم نهایی
+https://ArvinPr.github.io/student-productivity-dashboard/
